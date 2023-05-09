@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/Jo-cloud85/interactive-pricing-component.git](https://github.com/Jo-cloud85/interactive-pricing-component.git)
+- Live Site URL: [https://jo-cloud85.github.io/interactive-pricing-component/](https://jo-cloud85.github.io/interactive-pricing-component/)
 
 ## My process
 
