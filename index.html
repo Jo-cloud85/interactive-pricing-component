@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Interactive pricing component</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/tablet_desktop.css">
+</head>
+
+<body>
+  <main>
+    <img id="bg-pattern" src="./images/bg-pattern.svg" alt="bg-pattern">
+    <header>
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trial. <br>No credit card required.</p>
+      <img id="pattern-circle" src="./images/pattern-circles.svg" alt="pattern-circle">
+    </header>
+
+    <div class="main-container">
+
+      <div class="page-view-section">
+        <span id="views-num">100k Pageviews</span>
+        <div id="slider"><input id="slider-bar" type="range" min="0" max="4" step="1"></div>
+        <div id="price-per-month">
+          <span id="price">$16.00</span>
+          <span id="per-month"> / month</span>
+        </div>
+      </div>
+
+      <div class="billing-section">
+        <span>Monthly Billing</span>
+        <div id="toggle-switch">
+          <input type="checkbox" id="toggle">
+          <label for="toggle" id="toggle-label"></label>
+        </div>
+        <span>Yearly Billing</span>
+        <span id="discount">-25%</span>
+      </div>
+
+      <hr>
+
+      <div class="details-section">
+        <ul>
+          <li><img src="./images/icon-check.svg" alt="icon-check"> Unlimited websites</li>
+          <li><img src="./images/icon-check.svg" alt="icon-check"> 100% data ownership</li>
+          <li><img src="./images/icon-check.svg" alt="icon-check"> Email reports</li>
+        </ul>
+        <button>Start my trial</button>
+      </div>
+
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
+</html>
+
+<!-- <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Your Name Here</a>.
+</div> -->

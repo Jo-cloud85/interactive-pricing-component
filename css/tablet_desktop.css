@@ -1,0 +1,71 @@
+@media screen and (min-width: 600px) {
+    .main-container {
+        width: 500px;
+        padding: 2.5rem 0 var(--r22) 0;
+    }
+
+    /* -------------------- Header --------------------- */
+    header br {
+        display: none;
+    }
+
+    /* --------------- Page view section ---------------- */
+    .page-view-section {
+        display: grid;
+        grid-template-areas: 
+        "a b"
+        "c c";
+    }
+
+    #views-num {
+        grid-area: a;
+        font-size: var(--r14);
+        line-height: var(--r20);
+        letter-spacing: 2px;
+    }
+
+    #slider {
+        grid-area: c;
+    }
+
+    #price-per-month {
+        grid-area: b;
+    }
+
+    #price {
+        font-size: 2.5rem;
+        line-height: var(--r55);
+        letter-spacing: -1px;
+    }
+    
+    #per-month {
+        font-size: 1rem;
+        line-height: var(--r22);
+    }
+
+    /* ---------------- Billing section ----------------- */
+    #toggle-label {
+        margin: 0 1rem;
+    }
+
+    #discount {
+        right: 2.5rem;
+    }
+
+    #discount::after {
+        content: " discount";
+    }
+
+    /* ---------------- Details section ----------------- */
+    .details-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 2rem;
+        text-align: left;
+    }
+
+    .details-section button {
+        margin-top: 0;
+    }
+}

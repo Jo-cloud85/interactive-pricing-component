@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --soft-cyan: hsl(174, 77%, 80%);
+    --strong-cyan: hsl(174, 86%, 45%);
+    --strong-cyan2: hsl(174, 100%, 31%);
+    --light-grayish-red: hsl(14, 92%, 95%);
+    --light-red: hsl(15, 100%, 70%);
+    --pale-blue: hsl(226, 100%, 87%);
+
+    --white: hsl(0, 0%, 100%);
+    --very-pale-blue: hsl(230, 100%, 99%);
+    --light-grayish-blue1:hsl(224, 65%, 95%);
+    --light-grayish-blue2: hsl(223, 50%, 87%);
+    --grayish-blue: hsl(225, 20%, 60%);
+    --dark-desaturated-blue: hsl(227, 35%, 25%);
+}
+
+html {
+    --r325: calc((325 / var(--base) * 1rem));
+    --r73: calc((73 / var(--base) * 1rem));
+    --r55: calc((55 / var(--base) * 1rem));
+    --r46: calc((46 / var(--base) * 1rem));
+    --r44: calc((44 / var(--base) * 1rem));
+    --r38: calc((38 / var(--base) * 1rem));
+    --r34: calc((34 / var(--base) * 1rem));
+    --r28: calc((28 / var(--base) * 1rem));
+    --r22: calc((22 / var(--base) * 1rem));
+    --r20: calc((20 / var(--base) * 1rem));
+    --r18: calc((18 / var(--base) * 1rem));
+    --r15: calc((15 / var(--base) * 1rem));
+    --r14: calc((14 / var(--base) * 1rem));
+    --r12: calc((12 / var(--base) * 1rem));
+    --r10: calc((10 / var(--base) * 1rem));
+    --base: 16;
+}
+
+/* --------------- Overall structure ---------------- */
+body, main {
+    display: grid;
+    place-items: center;
+}
+
+body {
+    background-color: var(--very-pale-blue);
+    font-family: 'Manrope', sans-serif;
+    height: 100vh;
+}
+
+#bg-pattern {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    z-index: -5;
+}
+
+.main-container {
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 30px hsla(227, 35%, 25%, 0.2);
+    box-sizing: border-box;
+    width: var(--r325);
+    padding: var(--r34) 0 2rem 0;
+}
+
+/* -------------------- Header --------------------- */
+header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+header h1 {
+    color: var(--dark-desaturated-blue);
+    font-size: var(--r20);
+    line-height: var(--r28);
+    padding-bottom: 0.5rem;
+}
+
+header p {
+    color: var(--grayish-blue);
+    font-size: var(--r14);
+    line-height: 1.5rem;
+}
+
+#pattern-circle {
+    position: absolute;
+    top: -50%;
+    right: calc(50% - var(--r73));
+    z-index: -1;
+}
+
+/* --------------- Page view section ---------------- */
+.page-view-section {
+    display: grid;
+    place-items: center;
+    color: var(--grayish-blue);
+    text-align: center;
+}
+
+#views-num {
+    font-weight: 800;
+    font-size: var(--r12);
+    line-height: 1rem;
+    letter-spacing: 1.71px;
+    text-transform: uppercase;
+}
+
+#slider {
+    width: 85%;
+}
+
+#slider-bar {
+    background-color: var(--light-grayish-blue1);
+    border: none;
+    border-radius: 0.25rem;
+    height: 0.5rem;
+    width: 100%;
+    margin: 2.5rem 0;
+    -webkit-appearance: none; /* Hides the default slider appearance for webkit browsers */
+    outline: none; /* Removes the default outline on focus */
+    opacity: 0.7;
+    transition: opacity 0.2s; 
+}
+
+#slider-bar:hover {
+    opacity: 1;
+}
+
+#slider-bar::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Hides the default thumb appearance for webkit browsers */
+    appearance: none; /* Hides the default thumb appearance for other browsers */
+    background-color: var(--strong-cyan2); 
+    background-image: url(../images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%; 
+    box-shadow: 0 0 20px var(--strong-cyan);
+    cursor: pointer; 
+    width: 2.5rem; 
+    height: 2.5rem; 
+}
+
+#price {
+    color: var(--dark-desaturated-blue);
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: var(--r44);
+    letter-spacing: -0.8px;
+}
+
+#price-per-month {
+    display: flex;
+    align-items: center;
+    gap: var(--r10);
+}
+
+#per-month {
+    font-weight: 600;
+    font-size: var(--r14);
+    line-height: var(--r20);
+}
+
+/* ---------------- Billing section ----------------- */
+.billing-section {
+    color: var(--grayish-blue);
+    display: flex;
+    font-size: var(--r12);
+    line-height: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin: var(--r34) 0 var(--r38) 0;
+    position: relative;
+}
+
+/* Toggle-switch */
+#toggle-switch {
+    font-size: 0;
+    line-height: 0;
+}
+
+#toggle-switch input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#toggle-label {
+    background-color: var(--light-grayish-blue2);
+    border-radius: var(--r12);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: var(--r22);
+    width: var(--r44);
+    position: relative;
+    margin: 0 var(--r10);
+    transition: 0.5s;
+}
+
+.switch-on #toggle-label {
+    background-color: var(--strong-cyan);
+}
+
+#toggle-label::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--white);
+    position: absolute;
+    border-radius: 0.5rem;
+    top: calc(50% - 0.5rem);
+    left: 0.25rem;
+    transition: 0.5s;
+}
+
+input:checked + #toggle-label:after {
+    background-color: var(--white);
+    transform: translateX(125%);
+}
+
+#discount {
+    background-color: var(--light-grayish-red);
+    border-radius: var(--r10);
+    color: var(--light-red);
+    font-size: var(--r10);
+    line-height: var(--r14);
+    padding: 2px 7px 3px 7px;
+    position: absolute;
+    right: 0.5rem;
+}
+
+hr {
+    border-top: 0;
+}
+
+/* ---------------- Details section ----------------- */
+.details-section {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.details-section li,
+.details-section button {
+    font-size: var(--r12);
+    line-height: 1rem;
+}
+
+.details-section li {
+    color: var(--grayish-blue);
+    list-style: none;
+    padding-bottom: var(--r10);
+}
+
+.details-section img {
+    padding-right: var(--r10);
+}
+
+.details-section button {
+    background-color: var(--dark-desaturated-blue);
+    border: none;
+    border-radius: var(--r20);
+    color: var(--pale-blue);
+    cursor: pointer;
+    font-family: 'Manrope', sans-serif;
+    margin-top: var(--r22);
+    padding: var(--r12) var(--r46);
+    transition: all 0.2s ease;
+}
+
+.details-section button:is(:hover,:focus) {
+    color: var(--white);
+}
+
+/* .attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+} */
