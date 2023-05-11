@@ -5,10 +5,20 @@
     }
 
     /* -------------------- Header --------------------- */
-    header br {
+    .heading {
+        margin-bottom: 5.5rem;
+    }
+
+    .heading br {
         display: none;
     }
 
+    .heading h1 {
+        font-size: var(--r28);
+        line-height: var(--r38);
+        padding-bottom: var(--r12);
+    }
+    
     /* --------------- Page view section ---------------- */
     .page-view-section {
         display: grid;
