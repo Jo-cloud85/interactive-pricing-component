@@ -11,16 +11,15 @@
 </head>
 
 <body>
+  <img id="bg-pattern" src="./images/bg-pattern.svg" alt="bg-pattern">
   <main>
-    <img id="bg-pattern" src="./images/bg-pattern.svg" alt="bg-pattern">
-    <header>
+    <div class="heading">
       <h1>Simple, traffic-based pricing</h1>
       <p>Sign-up for our 30-day trial. <br>No credit card required.</p>
       <img id="pattern-circle" src="./images/pattern-circles.svg" alt="pattern-circle">
-    </header>
+    </div>
 
     <div class="main-container">
-
       <div class="page-view-section">
         <span id="views-num">100k Pageviews</span>
         <div id="slider"><input id="slider-bar" type="range" min="0" max="4" step="1"></div>
@@ -30,7 +29,7 @@
         </div>
       </div>
 
-      <div class="billing-section">
+      <div class="billing-section">0
         <span>Monthly Billing</span>
         <div id="toggle-switch">
           <input type="checkbox" id="toggle">
@@ -50,7 +49,6 @@
         </ul>
         <button>Start my trial</button>
       </div>
-
     </div>
   </main>
   <script src="./script.js"></script>
