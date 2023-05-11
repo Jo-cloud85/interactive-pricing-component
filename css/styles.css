@@ -23,6 +23,7 @@
 }
 
 html {
+    --r500: calc((500 / var(--base) * 1rem));
     --r325: calc((325 / var(--base) * 1rem));
     --r73: calc((73 / var(--base) * 1rem));
     --r55: calc((55 / var(--base) * 1rem));
@@ -64,27 +65,27 @@ body {
 .main-container {
     background-color: var(--white);
     border-radius: 0.5rem;
-    box-shadow: 0 0 30px hsla(227, 35%, 25%, 0.2);
+    box-shadow: 0 0 var(--r28) hsla(227, 35%, 25%, 0.2);
     box-sizing: border-box;
     width: var(--r325);
     padding: var(--r34) 0 2rem 0;
 }
 
 /* -------------------- Header --------------------- */
-header {
+.heading {
     text-align: center;
     position: relative;
-    margin-bottom: 4rem;
+    margin: 4rem 0;
 }
 
-header h1 {
+.heading h1 {
     color: var(--dark-desaturated-blue);
     font-size: var(--r20);
     line-height: var(--r28);
     padding-bottom: 0.5rem;
 }
 
-header p {
+.heading p {
     color: var(--grayish-blue);
     font-size: var(--r14);
     line-height: 1.5rem;

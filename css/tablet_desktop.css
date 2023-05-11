@@ -1,6 +1,6 @@
 @media screen and (min-width: 600px) {
     .main-container {
-        width: 500px;
+        width: var(--r500);
         padding: 2.5rem 0 var(--r22) 0;
     }
 
